@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.App {
+  text-align: center;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --------------- Contenedor --------------*/
+
+.contenedor{
+  padding: 20px 0;
+}
+
+
+/* ------------------ Main ------------------ */
+
+
+.hero{
+  background-image: url("./img/book\ hero.jpg");
+  height: 1000px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 20px 0;
+}
+
+.navegacion{
+  width: 1000px;
+  margin: 0 auto;
+  background-color: rgb(0, 0, 77);
+  color: white;
+  font-size: 22px
+}
+
+#home{
+  text-decoration: none;
+  color: white;
+}
+
+
+.navegacion ul{
+  list-style: none;
+}
+
+
+.menu,
+.submenu{
+  padding: 0;
+  margin: 0;
+}
+
+
+/*menu*/
+
+
+.menu > li{ /*el signo > es para editar solo a los li de la clase menu y no a sus nietos*/
+  display: inline-block;
+  position: relative;
+  z-index: 300;
+}
+
+.menu > li > p{
+  margin: 0;
+  display: block;
+  padding: 14.4px 20px;
+}
+
+.menu li p:hover,
+.menu #home:hover{
+  background-color: rgb(0, 110, 161);
+  transition: all .3s ease-in-out
+}
+
+.menu li p:hover{
+  cursor: pointer;
+}
+
+
+
+/*submenu*/
+
+
+.submenu{
+  position: absolute;
+  height: 0;/*le doy altura cero y oculto lo que sobresale (osea todo)*/
+  overflow: hidden;
+  background-color:  rgb(0, 110, 161);
+  width: 250%;  /*como toma el ancho de su padre(con position relative) por tener un position absolute, le puedo decir que sea 100% mas grande que el width de su padre*/
+  transition: all .3s;
+}
+
+
+.submenu li p{
+  margin: 0;
+  display: block;
+  padding: 15px 20px;
+  font-size: 18px;
+}
+
+.submenu li a{
+  text-decoration: none;
+  color: white;
+}
+
+.submenu li p:hover{
+  cursor: pointer;
+  background-color:  rgba(0, 0, 77, 0.246);
+}
+
+
+.titulo{
+  text-align: center;
+  margin-top: 50px;
+  font-size: 80px;
+  font-family: 'Noto Serif', serif;
+  color: cornflowerblue;
+  text-shadow: 5px 5px rgba(128, 128, 128, 0.308);
+  font-weight: 700;
+}
+
+/* ------------------ NuevaPersona ------------------ */
+
+.contenedor-nueva-persona{
+  background-image: url('../src/img/library.jpg');
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.formulario-persona{
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  bottom: 25%;
+  right: 25%;
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  background-color: rgb(161, 0, 27);
+  padding: 25px;
+  border-radius: 25px;
+}
+
+.formulario-persona h1{
+  font-family: 'Noto Serif', serif;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.entrada{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.entrada label{
+  margin: 10px 0;
+  color: white;
+  font-family: 'Noto Serif', serif;
+}
+
+.entrada input{
+  border-radius: 5px;
+  border: none;
+  height: 25px;
+}
+
+.submit input{
+  margin-top: 20px;
+  width: 100px;
+  height: 25px;
+  border: none;
+  color: white;
+  font-family: 'Noto Serif', serif;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: rgb(1, 199, 1);
+}
+
+.submit input:hover{
+  cursor: pointer;
+  background-color: rgb(1, 170, 1);
+}
+
+/*------------------- PersonasListado --------------------*/
+
+.listado-personas{
+  width: 90%;
+  margin: 20px auto;
+  background-color: rgba(177, 176, 176, 0.815);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.contenedor-personas{
+  height: 100%;
+  background-image: url("./img/people.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.tabla-persona{
+  width: 100%;
+}
+
+.encabezado{
+  font-weight: 700;
+}
+
+.encabezado,
+.personas{
+  font-family: 'Noto Serif', serif;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+  background-color: white;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.encabezado{
+  background-color: rgb(205, 99, 50);
+  color: white;
+}
+
+.encabezado p,
+.personas p,
+.acciones{
+  flex-basis: calc(17% - 10px);
+}
+
+.personas p{
+  font-size: 15px;
+}
+
+.acciones{
+  display: flex; 
+}
+
+.acciones .edit,
+.acciones .delete,
+.acciones p{
+  flex-basis: 50%;
+}
+
+.acciones .delete {
+  color: red;
+}
+
+.acciones .edit{
+  color: lightskyblue;
+}
+
+.acciones .delete i,
+.acciones .edit i{
+  font-size: 20px;
+}
+
+
+.acciones .delete i:hover,
+.acciones .edit i:hover{
+  cursor: pointer;
+}
