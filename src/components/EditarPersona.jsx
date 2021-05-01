@@ -17,7 +17,6 @@ export default function EditarPersona(props){
 
     return(
         <React.Fragment>
-            <h1>Id:{props.id}</h1>
         </React.Fragment>
     )
 }
